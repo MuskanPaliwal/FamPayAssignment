@@ -53,7 +53,7 @@ MIDDLEWARE = [
 ]
 
 CRON_CLASSES = [
-    "api.cron.CallYoutubeApi",
+    "api.cronJob.CallYoutubeApi",
 ]
 
 ROOT_URLCONF = 'FamPayAssignment.urls'
