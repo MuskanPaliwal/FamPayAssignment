@@ -21,7 +21,7 @@ class CallYoutubeApi(CronJobBase):
         apiKey = settings.GOOGLE_API_KEY
         youtube = build("youtube", "v3", developerKey= apiKey)
 
-        req = youtube.search().list(q = "cricket", part = "snippet", order = "date", publishedAfter = last_request_time.isoformat())
+        req = youtube.search().list(q = "cricket", part = "snippet", order = "date", publishedAfter=(self.last_request_time.replace(microsecond=0).isoformat()+'Z'))
         res = req.execute()
 
         for item in res['items']:
@@ -38,6 +38,6 @@ class CallYoutubeApi(CronJobBase):
                 description = description,
                 channel_id =channel_id,
                 channel_title = channel_title,
-                publishedTime = publishedDateTime,
+                publishedDateTime = publishedDateTime,
                 thumbnailsUrls = thumbnailsUrls,
             )
