@@ -4,19 +4,19 @@ An API to fetch latest videos from youtube sorted in reverse chronological order
 The server fetches latest videos async after every 5 minutes and saves it to the db.
 <h3>Installation </h3>
 
-1. **clone the repository.**
+1. **Clone the repository.**
 
    ```shell
    $git clone https://github.com/MuskanPaliwal/FamPayAssignment.git
 
    ```
-2. **navigate to downloaded folder.**
+2. **Navigate to downloaded folder.**
 
    ```shell
    $cd FamPayAssignment
 
    ```
-3. **set up virtual environment.**
+3. **Set up virtual environment.**
 
    ```shell
    #windows
@@ -28,7 +28,7 @@ The server fetches latest videos async after every 5 minutes and saves it to the
    $python3 -m venv venv
 
    ```
-4. **activate virtual environment.**
+4. **Activate virtual environment.**
 
    ```shell
    #windows
@@ -40,7 +40,7 @@ The server fetches latest videos async after every 5 minutes and saves it to the
    $source venv/bin/activate
 
    ```
-5. **install django & other required dependencies**
+5. **Install django & other required dependencies**
     ```shell
     
     #windows
@@ -56,10 +56,10 @@ The server fetches latest videos async after every 5 minutes and saves it to the
    ```
   
 6. **For getting an API key follow [this](https://developers.google.com/youtube/v3/getting-started)**
-    Inside the `setting.py` file, fill the variable `GOOGLE_API_KEYS` with all the API Keys available,the list should be filled as `['API_KEY_1','API_KEY_2',...]`
+7. **Inside the `setting.py` file, fill the variable `GOOGLE_API_KEYS` with all the API Keys available,the list should be filled as               `['API_KEY_1','API_KEY_2',...]`**
 
 
-7. **run app**
+8. **Run app**
     ```shell
 
     #linux/mac OS
