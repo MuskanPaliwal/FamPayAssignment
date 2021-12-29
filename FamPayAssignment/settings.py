@@ -91,7 +91,7 @@ DATABASES = {
 }
 
 CRONJOBS = [
-    ('*/5 * * * *', 'FamPayAssignment.api.cronJob.CallYoutubeApi','>> ~/home/muskanp/FamPayAssignment/cron_job.log')
+    ('*/5 * * * *', 'FamPayAssignment.api.cronJob.CallYoutubeApi','>> ~/home/muskanp/FamPayAssignment/cronjob.log')
 ]
 
 # Password validation
