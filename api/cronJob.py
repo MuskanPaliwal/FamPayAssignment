@@ -12,8 +12,8 @@ from datetime import datetime, timedelta
 
 class CallYoutubeApi(CronJobBase):
     RUN_EVERY_MINS = 5 #runs after every 5 minutes
-
-    schedule = Schedule(run_every_mins=RUN_EVERY_MINS)
+    RETRY_AFTER_FAILURE_MINS = 2
+    schedule = Schedule(run_every_mins=RUN_EVERY_MINS, retry_after_failure_mins=RETRY_AFTER_FAILURE_MINS)
     code = 'api.call_youtube_api'    # a unique code
 
     def do(self):
