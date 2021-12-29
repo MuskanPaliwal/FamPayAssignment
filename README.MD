@@ -56,8 +56,7 @@ The server fetches latest videos async after every 5 minutes and saves it to the
    ```
   
 6. **For getting an API key follow [this](https://developers.google.com/youtube/v3/getting-started)**
-7. 
-  **Inside the `setting.py` file, fill the variable `GOOGLE_API_KEYS` with all the API Keys available,the list should be filled as                  `['API_KEY_1','API_KEY_2',...]`**
+7. **Inside the `setting.py` file, fill the variable `GOOGLE_API_KEYS` with all the API Keys available,the list should be filled as               `['API_KEY_1','API_KEY_2',...]`**
 
 
 8. **Run app**
