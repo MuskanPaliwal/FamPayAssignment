@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'api',
     'rest-framework',
     'django-cron',
+    'django-crontab'
 ]
 
 MIDDLEWARE = [
@@ -87,6 +88,9 @@ DATABASES = {
     }
 }
 
+# CRONJOBS = [
+#     ('*/5 * * * *', 'FamPayAssignment.api.cronJob.CallYoutubeApi','>> ~/home/muskanp/FamPayAssignment/cron_job.log')
+# ]
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

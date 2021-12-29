@@ -14,6 +14,8 @@ class ResultsPagination(CursorPagination):
     max_page_size = 100
 
 class YoutubeItems(generics.ListAPIView):
+    search_fields = ['title']
+    filter_backends = (filters.SearchFilter)
     queryset = Videos.objects.all().order_by('-publishedDateTime')
     serializer_class = VideosSerializer
     pagination_class = ResultsPagination

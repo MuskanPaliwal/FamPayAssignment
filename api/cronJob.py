@@ -10,18 +10,18 @@ from FamPayAssignment import settings
 from datetime import datetime, timedelta
 
 class CallYoutubeApi(CronJobBase):
-    RUN_EVERY_MINS = 10 #runs after every 10 minutes
+    RUN_EVERY_MINS = 5 #runs after every 5 minutes
 
     schedule = Schedule(run_every_mins=RUN_EVERY_MINS)
     code = 'api.call_youtube_api'    # a unique code
     time_now = datetime.now()
-    last_request_time = time_now - timedelta(minutes=10)
+    last_request_time = time_now - timedelta(minutes=5)
 
     def do(self):
         apiKey = settings.GOOGLE_API_KEY
         youtube = build("youtube", "v3", developerKey= apiKey)
 
-        req = youtube.search().list(q = "cricket", part = "snippet", order = "date", publishedAfter=(self.last_request_time.replace(microsecond=0).isoformat()+'Z'))
+        req = youtube.search().list(q = "cricket", part = "snippet", order = "date", maxResults=50, publishedAfter=(self.last_request_time.replace(microsecond=0).isoformat()+'Z'))
         res = req.execute()
 
         for item in res['items']:
